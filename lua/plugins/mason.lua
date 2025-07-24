@@ -12,12 +12,16 @@ return {
             config = true
         },
         "williamboman/mason.nvim",
-        {
-            "williamboman/mason-lspconfig.nvim",
-            config = {
-                automatic_installation = true
-            }
-        },
+        -- {
+        --     "williamboman/mason-lspconfig.nvim",
+        --     config = {
+        --         -- automatic_installation = true
+        --         require("mason-lspconfig").setup({
+        --             automatic_installation = true
+        --         })
+        --     }
+        -- },
+        "williamboman/mason-lspconfig.nvim",
         "ray-x/cmp-treesitter",
         "hrsh7th/nvim-cmp",
         "hrsh7th/cmp-nvim-lsp",
@@ -35,38 +39,48 @@ return {
         masonConfig.setup({
             automatic_installation = true,
             ensure_installed = {
-                "clangd",    -- C and C++
-                "csharp_ls",
+                "angularls",
+                "bashls",
+                "clangd",
                 "cmake",
+                "csharp_ls",
                 "cssls",
+                "css_variables",
+                "cssmodules_ls",
                 "dockerls",
-                "eslint",
                 "emmet_ls",
+                "eslint",
+                "gh_actions_ls",
                 "html",
+                "intelephense",
+                "jdtls",
                 "jsonls",
-                "jdtls",     -- Java
-                "tsserver", -- Typescript and Javascript
+                "ltex",
                 "lua_ls",
-                "marksman", -- Markdown
-                "intelephense", -- PHP
-                "pyright",  -- Python
+                "luau_lsp",
+                "marksman",
+                "omnisharp",
+                "omnisharp_mono",
+                "pyright",
                 "rust_analyzer",
                 "sqlls",
                 "tailwindcss",
-                "taplo",     -- Toml,
-                "volar"     -- Vue
+                "taplo",
+                "ts_ls",
+                "vimls",
+                "vue_ls",
+                "yamlls"
             }
         })
         local capabilities = cmpNvimLsp.default_capabilities()
 
-        masonConfig.setup_handlers({
+        masonConfig.setup({
             function(serverName)
                 lspConfig[serverName].setup({
                     capabilities = capabilities
                 })
             end,
         })
-
 
         cmp.setup({
             snippet = {
