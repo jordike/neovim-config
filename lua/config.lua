@@ -28,8 +28,12 @@ vim.opt.signcolumn = "yes"
 
 vim.opt.showmode = false
 
--- vim.cmd.colorscheme "themer_sakura"
---vim.cmd.colorscheme "themer_onedark"
-
 vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
+
+vim.diagnostic.enable = true
+vim.diagnostic.config({
+    virtual_text = true,
+    update_in_insert = true
+    -- virtual_lines = true,
+})
