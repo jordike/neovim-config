@@ -1,7 +1,7 @@
 vim.opt.number = true
 vim.opt.relativenumber = true
 
-vim.opt.clipboard = "unnamedplus"
+vim.opt.clipboard = 'unnamedplus'
 
 vim.opt.expandtab = true
 vim.opt.shiftwidth = 4
@@ -24,7 +24,7 @@ vim.opt.cursorline = true
 vim.opt.splitright = true
 vim.opt.splitbelow = true
 
-vim.opt.signcolumn = "yes"
+vim.opt.signcolumn = 'yes'
 
 vim.opt.showmode = false
 
@@ -34,6 +34,8 @@ vim.g.loaded_netrwPlugin = 1
 vim.diagnostic.enable = true
 vim.diagnostic.config({
     virtual_text = true,
-    update_in_insert = true
-    -- virtual_lines = true,
+    update_in_insert = true,
+    signs = true,
+    float = true,
+    underline = true
 })

@@ -1,7 +1,7 @@
 return {
-    "tiagovla/tokyodark.nvim",
+    'tiagovla/tokyodark.nvim',
     config = function()
-        require("tokyodark").setup({
+        require('tokyodark').setup({
             styles = {
                 comments = {
                     italic = false

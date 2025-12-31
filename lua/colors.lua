@@ -1,0 +1,5 @@
+vim.api.nvim_set_hl(0, 'VirtualTextError', { link = 'ErrorFloat' })
+vim.api.nvim_set_hl(0, 'VirtualTextWarning', { link = 'WarningFloat' })
+vim.api.nvim_set_hl(0, 'VirtualTextHint', { link = 'HintFloat' })
+vim.api.nvim_set_hl(0, 'VirtualTextInfo', { link = 'InfoFloat' })
+vim.api.nvim_set_hl(0, 'VirtualTextOk', { link = 'OkFloat' })

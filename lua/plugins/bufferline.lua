@@ -1,7 +1,7 @@
 return {
-    "akinsho/bufferline.nvim",
+    'akinsho/bufferline.nvim',
     config = function()
-        local bufferline = require("bufferline")
+        local bufferline = require('bufferline')
 
         bufferline.setup({
             options = {
@@ -9,22 +9,22 @@ return {
                 themable = true,
                 offsets = {
                     {
-                        filetype = "neo-tree",
+                        filetype = 'neo-tree',
                         seperator = false
                     }
                 },
-                separator_style = "slant",
-                diagnostics = "nvim_lsp",
-                numbers = "buffer_id",
+                separator_style = 'slant',
+                diagnostics = 'nvim_lsp',
+                numbers = 'buffer_id',
                 color_icons = true,
                 hover = {
                     enabled = true,
                     reveal = {
-                        "close"
+                        'close'
                     }
                 },
                 indicator = {
-                    style = "none"
+                    style = 'none'
                 },
                 show_tab_indicators = true,
                 show_duplicate_prefix = true

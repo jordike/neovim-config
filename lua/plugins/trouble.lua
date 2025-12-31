@@ -1,5 +1,5 @@
 return {
-    "folke/trouble.nvim",
+    'folke/trouble.nvim',
     opts = {
         auto_close = false, -- auto close when there are no items
         auto_open = false, -- auto open when there are items
