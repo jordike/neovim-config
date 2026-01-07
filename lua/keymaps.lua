@@ -22,6 +22,9 @@ vim.keymap.set('n', '<leader>s', ':Telescope symbols<CR>', {
 vim.keymap.set('n', '<leader>m', ':Telescope marks<CR>', {
     silent = true
 })
+vim.keymap.set('n', '<leader>b', ':Gitsign blame_line<CR>', {
+    silent = true
+})
 
 vim.keymap.set('n', '<Tab>', ':Neotree toggle<CR>', {
     silent = true
