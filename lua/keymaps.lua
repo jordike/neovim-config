@@ -1,35 +1,47 @@
 vim.g.mapleader = '\\'
 
 -- Telescope
-vim.keymap.set('n', '<leader>f', ':Telescope find_files<CR>', {
+vim.keymap.set('n', '<leader>tf', ':Telescope find_files<CR>', {
     silent = true
 })
-vim.keymap.set('n', '<leader>b', ':Telescope buffers<CR>', {
+vim.keymap.set('n', '<leader>tb', ':Telescope buffers<CR>', {
     silent = true
 })
-vim.keymap.set('n', '<leader>g', ':Telescope live_grep<CR>', {
+vim.keymap.set('n', '<leader>tg', ':Telescope live_grep<CR>', {
     silent = true
 })
-vim.keymap.set('n', '<leader>d', ':Telescope lsp_definitions<CR>', {
+vim.keymap.set('n', '<leader>td', ':Telescope lsp_definitions<CR>', {
     silent = true
 })
-vim.keymap.set('n', '<leader>r', ':Telescope lsp_references<CR>', {
+vim.keymap.set('n', '<leader>tr', ':Telescope lsp_references<CR>', {
     silent = true
 })
-vim.keymap.set('n', '<leader>s', ':Telescope symbols<CR>', {
+vim.keymap.set('n', '<leader>ts', ':Telescope lsp_document_symbols<CR>', {
     silent = true
 })
-vim.keymap.set('n', '<leader>m', ':Telescope marks<CR>', {
-    silent = true
-})
-vim.keymap.set('n', '<leader>b', ':Gitsign blame_line<CR>', {
+vim.keymap.set('n', '<leader>tm', ':Telescope marks<CR>', {
     silent = true
 })
 
+-- Diffview
+vim.keymap.set('n', '<leader>do', ':DiffviewOpen<CR>', {
+    silent = true
+})
+vim.keymap.set('n', '<leader>dc', ':DiffviewClose<CR>', {
+    silent = true
+})
+
+-- Gitsign
+vim.keymap.set('n', '<leader>gb', ':Gitsign blame_line<CR>', {
+    silent = true
+})
+
+-- Neotree
 vim.keymap.set('n', '<Tab>', ':Neotree toggle<CR>', {
     silent = true
 })
 
+-- Move lines
 vim.keymap.set('n', '<A-j>', ':m .+1<CR>==', {
     silent = true
 }) -- move line up(n)

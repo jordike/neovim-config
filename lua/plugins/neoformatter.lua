@@ -7,6 +7,8 @@ return {
         vim.g.neoformat_basic_format_trim = 1
         vim.g.neoformat_try_node_exe = 1
 
+        vim.g.neoformat_excluded_filetypes = { 'make' }
+
         vim.api.nvim_create_autocmd(
             'BufWritePre',
             {
