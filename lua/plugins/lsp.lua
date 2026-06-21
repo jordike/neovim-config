@@ -1,16 +1,56 @@
 return {
-    'ray-x/cmp-treesitter',
-    {
+    'neovim/nvim-lspconfig',
+    dependencies = {
+        'williamboman/mason.nvim',
+        'williamboman/mason-lspconfig.nvim',
+        'ray-x/cmp-treesitter',
         'hrsh7th/nvim-cmp',
-        dependencies = {
-            "onsails/lspkind.nvim"
-        }
+        'hrsh7th/cmp-nvim-lsp',
+        'L3MON4D3/LuaSnip',
     },
-    'hrsh7th/cmp-nvim-lsp',
     config = function()
+        require('mason').setup()
+
+        local masonLspConfig = require('mason-lspconfig')
         local cmp = require('cmp')
-        local lspkind = require("lspkind")
         local luasnip = require('luasnip')
+
+        masonLspConfig.setup({
+            automatic_installation = true,
+            ensure_installed = {
+                'ts_ls',
+                'pest_ls',
+                'nginx_language_server',
+                'kotlin_lsp',
+                'laravel_ls',
+                'asm_lsp',
+                'docker_language_server',
+                'html',
+                'css_variables',
+                'cssmodules_ls',
+                'jsonls',
+                'vtsls',
+                'yamlls',
+                'clangd',
+                'arduino_language_server',
+                'ltex',
+                'dockerls',
+                'omnisharp_mono',
+                'luau_lsp',
+                'bashls',
+                'tailwindcss',
+                'cmake',
+                'cssls',
+                'lua_ls',
+                'vue_ls',
+                'intelephense',
+                'gh_actions_ls',
+                'rust_analyzer',
+                'emmet_ls',
+                'eslint',
+                'vimls',
+            }
+        })
 
         cmp.setup({
             snippet = {
@@ -32,31 +72,6 @@ return {
                 ['<C-k>'] = cmp.mapping.select_prev_item(),
                 ['<C-j>'] = cmp.mapping.select_next_item(),
             }),
-            -- window = {
-            --     completion = {
-            --         winhighlight = "Normal:Pmenu,FloatBorder:Pmenu,Search:None",
-            --         side_padding = 0,
-            --     },
-            -- },
-            formatting = {
-                fields = { "kind", "abbr" },
-                format = lspkind.cmp_format({
-                    mode = "symbol_text",
-                    maxwidth = {
-                        menu = 50,
-                        abbr = 50
-                    },
-                    ellipsis_char = '...',
-                    show_labelDetails = true,
-                    menu = ({
-                        buffer = "[Buffer]",
-                        nvim_lsp = "[LSP]",
-                        luasnip = "[LuaSnip]",
-                        nvim_lua = "[Lua]",
-                        latex_symbols = "[Latex]",
-                    })
-                })
-            }
         })
 
         vim.lsp.config('ts_ls', {
@@ -69,7 +84,8 @@ return {
                 plugins = {
                     {
                         name = "@vue/typescript-plugin",
-                        location = vim.fn.expand(vim.fn.stdpath "data" .. "/mason/packages/vue-language-server/node_modules/@vue/language-server"), languages = { "vue" },
+                        location = vim.fn.expand(vim.fn.stdpath "data" .. "/mason/packages/vue-language-server/node_modules/@vue/language-server"),
+                        languages = { "vue" },
                     },
                 },
             },
@@ -92,5 +108,5 @@ return {
                 },
             },
         })
-    end
+    end,
 }
