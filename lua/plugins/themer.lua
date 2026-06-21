@@ -1,3 +1,0 @@
-return {
-    'ThemerCorp/themer.lua'
-}

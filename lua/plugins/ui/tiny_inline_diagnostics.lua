@@ -7,6 +7,7 @@ return {
             preset = 'classic'
         })
 
-        vim.diagnostic.config({ virtual_text = false }) -- Disable Neovim's default virtual text diagnostics
+        -- Disable Neovim's default virtual text diagnostics
+        vim.diagnostic.config({ virtual_text = false })
     end,
 }
