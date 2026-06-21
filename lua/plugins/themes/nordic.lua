@@ -1,6 +1,6 @@
 return {
-    'AlexvZyl/nordic.nvim',
+    "AlexvZyl/nordic.nvim",
     config = function()
-        require('nordic').load()
+        require("nordic").load()
     end
 }

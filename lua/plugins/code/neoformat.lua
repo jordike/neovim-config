@@ -1,5 +1,5 @@
 return {
-    'sbdchd/neoformat',
+    "sbdchd/neoformat",
     config = function()
         vim.g.neoformat_only_msg_on_error = 1
         vim.g.neoformat_basic_format_align = 1
@@ -7,13 +7,13 @@ return {
         vim.g.neoformat_basic_format_trim = 1
         vim.g.neoformat_try_node_exe = 1
 
-        vim.g.neoformat_excluded_filetypes = { 'make' }
+        vim.g.neoformat_excluded_filetypes = {"make"}
 
         vim.api.nvim_create_autocmd(
-            'BufWritePre',
+            "BufWritePre",
             {
-                pattern = '*',
-                command = 'Neoformat',
+                pattern = "*",
+                command = "Neoformat"
             }
         )
     end

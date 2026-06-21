@@ -1,6 +1,6 @@
 return {
-    { import = "plugins.code" },
-    { import = "plugins.themes" },
-    { import = "plugins.ui" },
-    { import = "plugins.ui.vcs" },
+    {import = "plugins.code"},
+    {import = "plugins.themes"},
+    {import = "plugins.ui"},
+    {import = "plugins.ui.vcs"}
 }
