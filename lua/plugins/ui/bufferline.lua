@@ -14,7 +14,7 @@ return {
                             seperator = false
                         }
                     },
-                    separator_style = "slant",
+                    separator_style = "thick",
                     diagnostics = "nvim_lsp",
                     numbers = "buffer_id",
                     color_icons = true,
