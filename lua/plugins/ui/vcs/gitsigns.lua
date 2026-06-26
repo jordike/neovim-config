@@ -44,5 +44,15 @@ return {
                 -- },
             }
         )
-    end
+    end,
+    keys = {
+        {
+            "<leader>gb",
+            function()
+                require("gitsigns").blame_line()
+            end,
+            desc = "Git blame line"
+        }
+    },
+    lazy = false
 }

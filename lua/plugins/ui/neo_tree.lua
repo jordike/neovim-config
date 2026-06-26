@@ -19,5 +19,14 @@ return {
                 }
             }
         )
-    end
+    end,
+    keys = {
+        {
+            "<leader>e",
+            function()
+                vim.cmd("Neotree toggle")
+            end,
+            desc = "Toggle Neo-tree"
+        }
+    }
 }

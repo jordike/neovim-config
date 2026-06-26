@@ -1,5 +1,6 @@
+require("keymaps.mapleader")
 require("config")
-require("keymaps")
 require("package_manager")
-require("theme")
 require("colors")
+require("theme")
+require("keymaps")

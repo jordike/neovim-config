@@ -6,15 +6,15 @@ return {
         vim.g.neoformat_basic_format_retab = 1
         vim.g.neoformat_basic_format_trim = 1
         vim.g.neoformat_try_node_exe = 1
-
-        vim.g.neoformat_excluded_filetypes = {"make"}
-
-        vim.api.nvim_create_autocmd(
-            "BufWritePre",
-            {
-                pattern = "*",
-                command = "Neoformat"
-            }
-        )
-    end
+    end,
+    keys = {
+        {
+            "<leader>f",
+            function()
+                vim.cmd("Neoformat")
+            end,
+            desc = "Formats the currently open buffer",
+            silent = true
+        }
+    }
 }

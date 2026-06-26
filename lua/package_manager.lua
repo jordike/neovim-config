@@ -21,6 +21,9 @@ require("lazy").setup(
         import = "plugins",
         install = {
             missing = true
+        },
+        checker = {
+            enabled = true
         }
     }
 )
