@@ -59,6 +59,13 @@ return {
                 require("telescope.utils").notify()
             end,
             desc = "Telescope notify history"
+        },
+        {
+            "<leader>ta",
+            function()
+                require("telescope.builtin").builtin()
+            end,
+            desc = "Telescope all options"
         }
     }
 }

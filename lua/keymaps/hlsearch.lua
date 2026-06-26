@@ -1,6 +1,6 @@
 vim.keymap.set(
     "n",
-    "<Esc><Esc>",
+    "<leader>ch",
     ":nohlsearch<CR>",
     {
         silent = true
