@@ -36,7 +36,7 @@ return {
                         'branch',
                         icon = '',
                         color = {
-                            bg = "#303030",
+                            bg = '#303030',
                         },
                         separator = {
                             right = '',

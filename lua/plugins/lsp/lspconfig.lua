@@ -43,19 +43,19 @@ return {
             },
         })
 
-        vim.lsp.config("clangd", {
+        vim.lsp.config('clangd', {
             root_markers = {
-                "compile_commands.json",
-                "compile_flags.txt",
-                ".clangd",
-                ".git",
-                ".hg",
-                ".svn",
+                'compile_commands.json',
+                'compile_flags.txt',
+                '.clangd',
+                '.git',
+                '.hg',
+                '.svn',
             },
 
             init_options = {
                 fallbackFlags = {
-                    "-std=c++20",
+                    '-std=c++20',
                 },
             },
 
@@ -63,8 +63,8 @@ return {
                 local root = vim.uri_to_fname(params.rootUri)
 
                 vim.list_extend(config.init_options.fallbackFlags, {
-                    "-I" .. root,
-                    "-I" .. vim.fs.joinpath(root, "include"),
+                    '-I' .. root,
+                    '-I' .. vim.fs.joinpath(root, 'include'),
                 })
             end,
         })

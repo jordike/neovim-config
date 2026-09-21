@@ -1,7 +1,7 @@
 return {
-    "metalelf0/jellybeans-nvim",
+    'metalelf0/jellybeans-nvim',
     cmd = 'Colorscheme',
     dependencies = {
-        "rktjmp/lush.nvim"
-    }
+        'rktjmp/lush.nvim',
+    },
 }
