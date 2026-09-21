@@ -1,10 +1,10 @@
 return {
-    "czrd/zero.nvim",
+    'czrd/zero.nvim',
+    lazy = false,
+    priority = 1000,
     config = function()
-        require("zero").setup(
-            {
-                style = "dark"
-            }
-        )
-    end
+        require('zero').setup({
+            style = 'dark',
+        })
+    end,
 }

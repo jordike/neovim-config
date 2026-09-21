@@ -1,3 +1,4 @@
 return {
-    "ThemerCorp/themer.lua"
+    'ThemerCorp/themer.lua',
+    cmd = 'Colorscheme',
 }

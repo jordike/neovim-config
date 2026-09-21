@@ -1,15 +1,14 @@
 return {
-    "rachartier/tiny-inline-diagnostic.nvim",
-    event = "VeryLazy",
-    priority = 1000,
+    'rachartier/tiny-inline-diagnostic.nvim',
+    event = 'BufReadPost',
     config = function()
-        require("tiny-inline-diagnostic").setup(
-            {
-                preset = "classic"
-            }
-        )
+        require('tiny-inline-diagnostic').setup({
+            preset = 'classic',
+        })
 
         -- Disable Neovim's default virtual text diagnostics
-        vim.diagnostic.config({virtual_text = false})
-    end
+        vim.diagnostic.config({
+            virtual_text = false,
+        })
+    end,
 }

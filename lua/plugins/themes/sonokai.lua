@@ -1,3 +1,4 @@
 return {
-    "sainnhe/sonokai"
+    'sainnhe/sonokai',
+    cmd = 'Colorscheme',
 }

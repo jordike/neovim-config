@@ -1,6 +1,7 @@
-require("keymaps.mapleader")
-require("config")
-require("package_manager")
-require("colors")
-require("theme")
-require("keymaps")
+-- stylua: ignore
+require('keymaps.mapleader')
+require('config')
+require('package_manager')
+require('colors')
+require('theme')
+require('keymaps')

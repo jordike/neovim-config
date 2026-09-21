@@ -1,71 +1,72 @@
 return {
-    "nvim-telescope/telescope.nvim",
+    'nvim-telescope/telescope.nvim',
     dependencies = {
-        "nvim-lua/plenary.nvim"
+        'nvim-lua/plenary.nvim',
     },
+    cmd = 'Telescope',
     keys = {
         {
-            "<leader>tf",
+            '<leader>tf',
             function()
-                require("telescope.builtin").find_files()
+                require('telescope.builtin').find_files()
             end,
-            desc = "Telescope find files"
+            desc = 'Telescope find files',
         },
         {
-            "<leader>tb",
+            '<leader>tb',
             function()
-                require("telescope.builtin").buffers()
+                require('telescope.builtin').buffers()
             end,
-            desc = "Telescope buffers"
+            desc = 'Telescope buffers',
         },
         {
-            "<leader>tg",
+            '<leader>tg',
             function()
-                require("telescope.builtin").live_grep()
+                require('telescope.builtin').live_grep()
             end,
-            desc = "Telescope live grep"
+            desc = 'Telescope live grep',
         },
         {
-            "<leader>td",
+            '<leader>td',
             function()
-                require("telescope.builtin").lsp_definitions()
+                require('telescope.builtin').lsp_definitions()
             end,
-            desc = "Telescope LSP definitions"
+            desc = 'Telescope LSP definitions',
         },
         {
-            "<leader>tr",
+            '<leader>tr',
             function()
-                require("telescope.builtin").lsp_references()
+                require('telescope.builtin').lsp_references()
             end,
-            desc = "Telescope LSP references"
+            desc = 'Telescope LSP references',
         },
         {
-            "<leader>ts",
+            '<leader>ts',
             function()
-                require("telescope.builtin").lsp_document_symbols()
+                require('telescope.builtin').lsp_document_symbols()
             end,
-            desc = "Telescope LSP symbols"
+            desc = 'Telescope LSP symbols',
         },
         {
-            "<leader>tm",
+            '<leader>tm',
             function()
-                require("telescope.builtin").marks()
+                require('telescope.builtin').marks()
             end,
-            desc = "Telescope marks"
+            desc = 'Telescope marks',
         },
         {
-            "<leader>th",
+            '<leader>th',
             function()
-                require("telescope.utils").notify()
+                require('telescope.utils').notify()
             end,
-            desc = "Telescope notify history"
+            desc = 'Telescope notify history',
         },
         {
-            "<leader>ta",
+            '<leader>ta',
             function()
-                require("telescope.builtin").builtin()
+                require('telescope.builtin').builtin()
             end,
-            desc = "Telescope all options"
-        }
-    }
+            desc = 'Telescope all options',
+        },
+    },
 }

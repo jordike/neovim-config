@@ -1,20 +1,34 @@
 return {
-    "sindrets/diffview.nvim",
+    'sindrets/diffview.nvim',
+    cmd = {
+        'DiffviewOpen',
+        'DiffviewClose',
+        'DiffviewFileHistory',
+    },
     keys = {
         {
-            "<leader>do",
+            '<leader>do',
             function()
-                vim.cmd("DiffviewOpen")
+                vim.cmd('DiffviewOpen')
             end,
-            desc = "Open diffview"
+            desc = 'Open diffview',
+            silent = true,
         },
         {
-            "<leader>dc",
+            '<leader>dc',
             function()
-                vim.cmd("DiffviewClose")
+                vim.cmd('DiffviewClose')
             end,
-            desc = "Close diffview"
-        }
+            desc = 'Close diffview',
+            silent = true,
+        },
+        {
+            '<leader>dh',
+            function()
+                vim.cmd('DiffviewFIleHistory')
+            end,
+            desc = 'Open file history',
+            silent = true,
+        },
     },
-    lazy = false
 }
