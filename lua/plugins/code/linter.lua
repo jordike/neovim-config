@@ -13,12 +13,12 @@ return {
             vue = { 'eslint' },
             svelte = { 'eslint' },
             html = { 'htmlhint' },
-            css = { 'stylelint' }, -- ???
+            css = { 'stylelint' },
             json = { 'jsonlint' },
             json5 = { 'json5' },
             markdown = { 'markdownlint' },
             yaml = { 'yamllint' },
-            toml = { 'taplo' }, -- ???
+            toml = { 'taplo' },
             python = { 'ruff' },
             lua = { 'selene' },
             sh = { 'shellcheck' },

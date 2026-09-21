@@ -1,7 +1,6 @@
 return {
     'czrd/zero.nvim',
-    lazy = false,
-    priority = 1000,
+    cmd = 'Colorscheme',
     config = function()
         require('zero').setup({
             style = 'dark',
