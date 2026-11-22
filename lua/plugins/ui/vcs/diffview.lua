@@ -7,7 +7,7 @@ return {
     },
     keys = {
         {
-            '<leader>do',
+            '<leader>dvo',
             function()
                 vim.cmd('DiffviewOpen')
             end,
@@ -15,7 +15,7 @@ return {
             silent = true,
         },
         {
-            '<leader>dc',
+            '<leader>dvc',
             function()
                 vim.cmd('DiffviewClose')
             end,
@@ -23,11 +23,11 @@ return {
             silent = true,
         },
         {
-            '<leader>dh',
+            '<leader>dvh',
             function()
                 vim.cmd('DiffviewFIleHistory')
             end,
-            desc = 'Open file history',
+            desc = 'Open diffview file history',
             silent = true,
         },
     },

@@ -1,7 +1,8 @@
 return {
-    'williamboman/mason.nvim',
+    'mason-org/mason.nvim',
     dependencies = {
-        'williamboman/mason-lspconfig.nvim',
+        'mason-org/mason-lspconfig.nvim',
+        'WhoIsSethDaniel/mason-tool-installer.nvim',
     },
     cmd = {
         'Mason',
@@ -11,8 +12,8 @@ return {
     event = 'BufReadPre',
     config = function()
         require('mason').setup()
+
         require('mason-lspconfig').setup({
-            automatic_installation = true,
             ensure_installed = {
                 'ts_ls',
                 'pest_ls',
@@ -43,6 +44,35 @@ return {
                 'emmet_ls',
                 'eslint',
                 'vimls',
+            },
+        })
+
+        require('mason-tool-installer').setup({
+            ensure_installed = {
+                -- Linters
+                'pylint',
+                'eslint_d',
+                'jsonlint',
+                'cpplint',
+                'cmakelang',
+                'cmakelint',
+
+                -- DAP
+                'netcoredbg',
+                'js-debug-adapter',
+                'codelldb',
+                'dart-debug-adapter',
+                'php-debug-adapter',
+
+                -- Formatters
+                'pint',
+                'xmlformatter',
+                'yamlfmt',
+                'prettier',
+                'clang-format',
+                'blade-formatter',
+                'luafmt',
+                'csharpier',
             },
         })
     end,

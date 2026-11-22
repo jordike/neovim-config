@@ -46,3 +46,10 @@ vim.diagnostic.config({
     float = true,
     underline = true,
 })
+
+if vim.fn.has('win32') == 1 then
+    vim.opt.shell = 'powershell.exe'
+    vim.opt.shellcmdflag = '-NoLogo -NoProfile -ExecutionPolicy RemoteSigned -Command'
+    vim.opt.shellquote = ''
+    vim.opt.shellxquote = ''
+end

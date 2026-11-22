@@ -31,6 +31,11 @@ return {
             vue = { 'prettier' },
             yaml = { 'prettier' },
         },
+        formatters = {
+            clang_format = {
+                prepend_args = { '--style=file' }
+            }
+        }
     },
     keys = {
         {
