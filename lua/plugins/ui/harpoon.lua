@@ -14,7 +14,7 @@ return {
                 desc = 'Harpoon: Add file',
             },
             {
-                '<leader>he',
+                '<leader>hm',
                 function()
                     local harpoon = require('harpoon')
                     harpoon.ui:toggle_quick_menu(harpoon:list())
@@ -22,46 +22,81 @@ return {
                 desc = 'Harpoon: Toggle menu',
             },
             {
-                '<leader>hp',
+                '<leader>p',
                 function()
                     require('harpoon'):list():prev()
                 end,
                 desc = 'Harpoon: Previous file',
             },
             {
-                '<leader>hn',
+                '<leader>n',
                 function()
                     require('harpoon'):list():next()
                 end,
                 desc = 'Harpoon: Next file',
             },
             {
-                '<leader>h1',
+                '<leader>1',
                 function()
                     require('harpoon'):list():select(1)
                 end,
                 desc = 'Harpoon: Select file 1',
             },
             {
-                '<leader>h2',
+                '<leader>2',
                 function()
                     require('harpoon'):list():select(2)
                 end,
                 desc = 'Harpoon: Select file 2',
             },
             {
-                '<leader>h3',
+                '<leader>3',
                 function()
                     require('harpoon'):list():select(3)
                 end,
                 desc = 'Harpoon: Select file 3',
             },
             {
-                '<leader>h4',
+                '<leader>4',
                 function()
                     require('harpoon'):list():select(4)
                 end,
                 desc = 'Harpoon: Select file 4',
+            },
+            {
+                '<leader>5',
+                function()
+                    require('harpoon'):list():select(5)
+                end,
+                desc = 'Harpoon: Select file 5',
+            },
+            {
+                '<leader>6',
+                function()
+                    require('harpoon'):list():select(6)
+                end,
+                desc = 'Harpoon: Select file 6',
+            },
+            {
+                '<leader>7',
+                function()
+                    require('harpoon'):list():select(7)
+                end,
+                desc = 'Harpoon: Select file 7',
+            },
+            {
+                '<leader>8',
+                function()
+                    require('harpoon'):list():select(8)
+                end,
+                desc = 'Harpoon: Select file 8',
+            },
+            {
+                '<leader>9',
+                function()
+                    require('harpoon'):list():select(9)
+                end,
+                desc = 'Harpoon: Select file 9',
             },
         },
         config = function()
