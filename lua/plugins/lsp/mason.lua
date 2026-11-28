@@ -14,6 +14,14 @@ return {
         require('mason').setup()
 
         require('mason-lspconfig').setup({
+            automatic_enable = {
+                exclude = {
+                    'omnisharp_mono',
+                    'vtsls',
+                    'dockerls',
+                    'css_variables',
+                },
+            },
             ensure_installed = {
                 'ts_ls',
                 'pest_ls',
@@ -22,10 +30,8 @@ return {
                 'asm_lsp',
                 'docker_language_server',
                 'html',
-                'css_variables',
                 'cssmodules_ls',
                 'jsonls',
-                'vtsls',
                 'yamlls',
                 'clangd',
                 'arduino_language_server',

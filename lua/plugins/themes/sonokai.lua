@@ -1,4 +1,5 @@
 return {
     'sainnhe/sonokai',
-    cmd = 'Colorscheme',
+    lazy = false,
+    priority = 1000,
 }

@@ -1,4 +1,5 @@
 return {
     'ThemerCorp/themer.lua',
-    cmd = 'Colorscheme',
+    lazy = false,
+    priority = 1000,
 }

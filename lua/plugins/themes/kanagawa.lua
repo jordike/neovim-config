@@ -1,4 +1,5 @@
 return {
     'rebelot/kanagawa.nvim',
-    cmd = 'Colorscheme',
+    lazy = false,
+    priority = 1000,
 }

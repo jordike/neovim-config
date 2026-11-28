@@ -1,4 +1,5 @@
 return {
     'vague-theme/vague.nvim',
-    cmd = 'Colorscheme',
+    lazy = false,
+    priority = 1000,
 }

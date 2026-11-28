@@ -6,12 +6,6 @@ return {
     },
     config = function()
         require('lint').linters_by_ft = {
-            javascript = { 'eslint' },
-            javascriptreact = { 'eslint' },
-            typescript = { 'eslint' },
-            typescriptreact = { 'eslint' },
-            vue = { 'eslint' },
-            svelte = { 'eslint' },
             html = { 'htmlhint' },
             css = { 'stylelint' },
             json = { 'jsonlint' },

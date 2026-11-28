@@ -1,6 +1,7 @@
 return {
     'AlexvZyl/nordic.nvim',
-    cmd = 'Colorscheme',
+    lazy = false,
+    priority = 1000,
     config = function()
         require('nordic').load()
     end,

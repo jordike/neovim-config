@@ -84,7 +84,7 @@ return {
         end
 
         local function find_dotnet_executable()
-            local root = get_lsp_root('omnisharp_mono')
+            local root = get_lsp_root('omnisharp')
 
             if not root then
                 return nil
@@ -169,7 +169,7 @@ return {
                 request = 'launch',
                 program = find_dotnet_executable,
                 cwd = function()
-                    return get_lsp_root('omnisharp_mono')
+                    return get_lsp_root('omnisharp')
                 end,
                 stopAtEntry = false,
             },

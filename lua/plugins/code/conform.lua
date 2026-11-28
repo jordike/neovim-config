@@ -10,6 +10,7 @@ return {
             blade = { 'blade-formatter' },
             c = { 'clang_format' },
             cpp = { 'clang_format' },
+            cs = { 'csharpier' },
             css = { 'prettier' },
             dart = { 'dart_format' },
             go = { 'gofmt' },
@@ -29,13 +30,14 @@ return {
             typescript = { 'prettier' },
             typescriptreact = { 'prettier' },
             vue = { 'prettier' },
+            xml = { 'xmlformatter' },
             yaml = { 'prettier' },
         },
         formatters = {
             clang_format = {
-                prepend_args = { '--style=file' }
-            }
-        }
+                prepend_args = { '--style=file' },
+            },
+        },
     },
     keys = {
         {

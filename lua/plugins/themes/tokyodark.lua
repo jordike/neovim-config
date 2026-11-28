@@ -1,6 +1,7 @@
 return {
     'tiagovla/tokyodark.nvim',
-    cmd = 'Colorscheme',
+    lazy = false,
+    priority = 1000,
     config = function()
         require('tokyodark').setup({
             styles = {

@@ -90,9 +90,10 @@ local clangd_env = vim.fn.has('win32') == 1 and { USERPROFILE = clangd_home }
         XDG_CONFIG_HOME = vim.fs.joinpath(clangd_home, '.config'),
     }
 
-local function clangd_config(std)
+local function clangd_config(std, filetypes)
     return {
         cmd = { 'clangd' },
+        filetypes = filetypes,
         cmd_env = clangd_env,
         root_dir = function(bufnr, on_dir)
             on_dir(find_project_root(vim.api.nvim_buf_get_name(bufnr)))
@@ -134,7 +135,9 @@ return {
             filetypes = {
                 'vue',
                 'typescript',
+                'typescriptreact',
                 'javascript',
+                'javascriptreact',
             },
             init_options = {
                 plugins = {
@@ -151,11 +154,15 @@ return {
         })
 
         vim.lsp.config('vue_ls', {
-            filetypes = {
-                'vue',
-                'typescript',
-                'javascript',
-            },
+            filetypes = { 'vue' },
+        })
+
+        vim.lsp.config('ltex', {
+            filetypes = { 'markdown', 'text', 'gitcommit', 'rst', 'tex' },
+        })
+
+        vim.lsp.config('laravel_ls', {
+            filetypes = { 'blade' },
         })
 
         vim.lsp.config('lua_ls', {
@@ -168,8 +175,11 @@ return {
             },
         })
 
-        vim.lsp.config('clangd', clangd_config('c++2d'))
-        vim.lsp.config('clangd_c', clangd_config(nil))
+        vim.lsp.config(
+            'clangd',
+            clangd_config('c++2d', { 'c.doxygen', 'cpp', 'cpp.doxygen', 'objc', 'objcpp', 'cuda' })
+        )
+        vim.lsp.config('clangd_c', clangd_config(nil, { 'c' }))
         vim.lsp.enable('clangd_c')
     end,
 }

@@ -1,6 +1,7 @@
 return {
     'metalelf0/jellybeans-nvim',
-    cmd = 'Colorscheme',
+    lazy = false,
+    priority = 1000,
     dependencies = {
         'rktjmp/lush.nvim',
     },
